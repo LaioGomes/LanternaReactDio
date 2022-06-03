@@ -1,0 +1,59 @@
+QUALIFIED 18-12-21:
+-------------------------------------------------------------------------------------------------------------
+
+EXERCÍCIOS >>
+
+1)
+
+class Pessoa:
+    
+    def __init__(self, nome, sobrenome, dataNascimento): 
+        self.nome = nome
+        self.sobrenome = sobrenome
+        self.dataNascimento = dataNascimento
+
+    def nomeCompleto(self):
+        return self.nome + ' ' + self.sobrenome # Concatenando a resposta: nome + ' ' + sobrenome
+
+    def abreviacao(self): 
+        a = []                  
+        for i in self.nomeCompleto():
+            if i.isupper():     
+                a.append(i)     
+                
+        return '.'.join(a) 
+
+-------------------------------------------------------------------------------------------------------------
+
+2) 
+
+class Fantasma:
+    
+    def __init__(self):
+        cor = ['branco', 'amarelo', 'roxo', 'vermelho']
+        import random                                  
+        self.cor = random.choice(cor)                  
+
+
+-------------------------------------------------------------------------------------------------------------
+
+3)
+
+class Dicionario():
+    
+    def __init__(self):
+        self.dicionario = dict()        
+        
+      
+    def nova_entrada(self, palavra, frase):
+        self.palavra = palavra
+        self.frase = frase
+        self.dicionario[self.palavra] = self.frase 
+        return self.dicionario
+        
+    def checar(self, palavra):
+        self.palavra = palavra
+        if self.palavra in self.dicionario: 
+            return self.dicionario[self.palavra] 
+        else:
+            return f'Não foi possível encontrar a palavra {self.palavra}' 
